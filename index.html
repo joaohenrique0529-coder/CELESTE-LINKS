@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Celeste_Professora</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Georgia', serif;
+      overflow: hidden;
+      background: #000;
+    }
+
+    #bg-video {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: 0;
+      opacity: 0.55;
+    }
+
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.6) 100%);
+      z-index: 1;
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+      padding: 40px 24px;
+      width: 100%;
+      max-width: 420px;
+      text-align: center;
+    }
+
+    .fire {
+      font-size: 36px;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.15); }
+    }
+
+    h1 {
+      font-size: 26px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.7);
+    }
+
+    .bio {
+      font-size: 15px;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.6;
+      text-shadow: 0 1px 6px rgba(0,0,0,0.6);
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      width: 100%;
+      margin-top: 8px;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 15px 20px;
+      border-radius: 50px;
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      text-align: center;
+      letter-spacing: 0.5px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.03);
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+    }
+
+    .btn-telegram {
+      background: linear-gradient(135deg, #c0392b, #8e0000);
+      color: #fff;
+      box-shadow: 0 4px 20px rgba(192,57,43,0.5);
+    }
+
+    .btn-privacy {
+      background: rgba(255,255,255,0.12);
+      color: #fff;
+      border: 1.5px solid rgba(255,255,255,0.4);
+      backdrop-filter: blur(6px);
+    }
+
+    .btn-privacy:hover {
+      background: rgba(255,255,255,0.2);
+    }
+
+    .footer {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <video id="bg-video" autoplay muted loop playsinline>
+    <source src="bg.mp4" type="video/mp4" />
+  </video>
+
+  <div class="overlay"></div>
+
+  <div class="container">
+    <div class="fire">🔥</div>
+    <h1>Celeste_Professora</h1>
+    <p class="bio">Aqui você vai ver um pouco<br>do meu lado proibido</p>
+
+    <div class="links">
+      <a class="btn btn-telegram" href="https://t.me/Prof_Celestebot" target="_blank">
+        Comunidade Telegram 🔥
+      </a>
+      <a class="btn btn-privacy" href="https://privacy.com.br/profile/celesteprof" target="_blank">
+        Privacy 🔥
+      </a>
+    </div>
+
+    <p class="footer">celeste 🔥</p>
+  </div>
+
+</body>
+</html>
